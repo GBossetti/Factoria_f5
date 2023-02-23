@@ -14,7 +14,7 @@
         %>
             <div class="col">
                 <div class="card h-100" style="width: 18rem;">
-                    <img src="./Imagenes/<%: imagen.Directorio %>" class="card-img-top" alt="...">
+                    <img src="./Imagenes/<%: imagen.Directorio %>" class="card-img-top" alt="<%:imagen.Titulo %>" onerror="this.src='./Configuracion/placeholder.jpg';">
                     <div class="card-body">
                         <h5 class="card-title"><%:imagen.Titulo %></h5>
                         <div class="d-grid mx-auto">
