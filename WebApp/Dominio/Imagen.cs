@@ -8,5 +8,10 @@ namespace Dominio
 {
     class Imagen
     {
+        public long Id { get; set; }
+        public string Titulo { get; set; }
+        public string Directorio { get; set; }
     }
+
+    //MockUp
 }
