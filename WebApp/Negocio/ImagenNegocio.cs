@@ -8,7 +8,7 @@ using AccesoBD;
 
 namespace Negocio
 {
-    class ImagenNegocio
+    public class ImagenNegocio
     {
         public List<Imagen> listar(bool activo = true)
         {
@@ -17,7 +17,7 @@ namespace Negocio
 
             try
             {
-                datos.setearProcedimiento("listarActivas");
+                datos.setearProcedimiento("listar");
                 datos.setearParametro("@estado", activo);
                 datos.ejecutarLectura();
                 
@@ -27,6 +27,8 @@ namespace Negocio
                     aux.Id = (long)datos.Lector["Id"];
                     aux.Titulo = (string)datos.Lector["Titulo"];
                     aux.Directorio = (string)datos.Lector["Directorio"];
+
+                    listaImagen.Add(aux);
                 }
 
                 return listaImagen;
