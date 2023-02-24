@@ -18,7 +18,7 @@
                     <div class="card-body">
                         <h5 class="card-title"><%:imagen.Titulo %></h5>
                         <div class="d-grid mx-auto">
-                            <a href="#" class="card-link">Editar</a>
+                            <a href="EditarImg.aspx?id=<%: imagen.Id %>" class="card-link">Editar</a>
                         </div>
                         <div class="d-grid mx-auto">
                             <a href="EliminarImg.aspx?id=<%: imagen.Id %>" class="card-link">Eliminar</a>

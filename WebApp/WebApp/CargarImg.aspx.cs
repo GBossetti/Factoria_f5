@@ -29,7 +29,6 @@ namespace WebApp
                 txtImagen.PostedFile.SaveAs(ruta + archivo);
 
                 negocio.guardarImagen(titulo, archivo);
-
                 Response.Redirect("Default.aspx", false);
 
             }

@@ -84,15 +84,26 @@ namespace Negocio
             }
         }
 
-        public void cargarImagen(long id)
+        public Imagen cargarImagen(long id)
         {
+            Imagen imagen = new Imagen();
             AccesoDatos datos = new AccesoDatos();
 
             try
             {
                 datos.setearProcedimiento("cargar");
                 datos.setearParametro("@Id", id);
-                datos.ejecutarAccion();
+                datos.ejecutarLectura();
+
+                while (datos.Lector.Read())
+                {
+                    imagen.Titulo = (string)datos.Lector["Titulo"];
+                    imagen.Directorio = (string)datos.Lector["Directorio"];
+                    imagen.Id = id;
+                }
+
+                return imagen;
+                
             }
             catch (Exception ex)
             {
@@ -102,6 +113,29 @@ namespace Negocio
             {
                 datos.cerrarConexion();
             }
+        }
+
+        public void modificarImagen(long id, string titulo)
+        {
+            AccesoDatos datos = new AccesoDatos();
+
+            try
+            {
+                datos.setearProcedimiento("modificar");
+                datos.setearParametro("@Id", id);
+                datos.setearParametro("@Titulo", titulo);
+                datos.ejecutarAccion();
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+            finally
+            {
+                datos.cerrarConexion();
+            }
+
         }
     }
 }
