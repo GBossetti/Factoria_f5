@@ -69,6 +69,7 @@
   <ItemGroup>
     <Content Include="CargarImg.aspx" />
     <Content Include="Default.aspx" />
+    <Content Include="EliminarImg.aspx" />
     <Content Include="Global.asax" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -86,6 +87,13 @@
     </Compile>
     <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EliminarImg.aspx.cs">
+      <DependentUpon>EliminarImg.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EliminarImg.aspx.designer.cs">
+      <DependentUpon>EliminarImg.aspx</DependentUpon>
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>

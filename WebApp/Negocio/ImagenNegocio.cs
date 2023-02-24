@@ -10,7 +10,7 @@ namespace Negocio
 {
     public class ImagenNegocio
     {
-        public List<Imagen> listar(bool activo = true)
+        public List<Imagen> listarImagen(bool activo = true)
         {
             List<Imagen> listaImagen = new List<Imagen>();
             AccesoDatos datos = new AccesoDatos();
@@ -43,13 +43,13 @@ namespace Negocio
             }
         }
 
-        public void cargar(string titulo, string directorio)
+        public void guardarImagen(string titulo, string directorio)
         {
             AccesoDatos datos = new AccesoDatos();
 
             try
             {
-                datos.setearProcedimiento("cargar");
+                datos.setearProcedimiento("guardar");
                 datos.setearParametro("@Titulo", titulo);
                 datos.setearParametro("@Directorio", directorio);
                 datos.ejecutarAccion();
@@ -62,8 +62,46 @@ namespace Negocio
             {
                 datos.cerrarConexion();
             }
-
         }
 
+        public void eliminarLogico(long id)
+        {
+            AccesoDatos datos = new AccesoDatos();
+            try
+            {
+                datos.setearProcedimiento("eliminarLogico");
+                datos.setearParametro("@Id", id);
+                datos.ejecutarAccion();
+
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                datos.cerrarConexion();
+            }
+        }
+
+        public void cargarImagen(long id)
+        {
+            AccesoDatos datos = new AccesoDatos();
+
+            try
+            {
+                datos.setearProcedimiento("cargar");
+                datos.setearParametro("@Id", id);
+                datos.ejecutarAccion();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                datos.cerrarConexion();
+            }
+        }
     }
 }

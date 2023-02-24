@@ -23,11 +23,14 @@ namespace WebApp
                 ImagenNegocio negocio = new ImagenNegocio();
                 string dia = DateTime.Now.ToString("yyyyMMddHHmmss");
 
-                string titulo = txtTitulo.ToString();
+                string titulo = txtTitulo.Text;
                 string ruta = Server.MapPath("./Imagenes/");
-                txtImagen.PostedFile.SaveAs(ruta + "img_" + dia + ".jpg");
+                string archivo = "img_" + dia + ".jpg";
+                txtImagen.PostedFile.SaveAs(ruta + archivo);
 
-                negocio.cargar(titulo, ruta);
+                negocio.guardarImagen(titulo, archivo);
+
+                Response.Redirect("Default.aspx", false);
 
             }
             catch (Exception ex)

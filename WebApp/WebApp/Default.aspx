@@ -21,7 +21,7 @@
                             <a href="#" class="card-link">Editar</a>
                         </div>
                         <div class="d-grid mx-auto">
-                            <a href="#" class="card-link">Eliminar</a>
+                            <a href="EliminarImg.aspx?id=<%: imagen.Id %>" class="card-link">Eliminar</a>
                         </div>
                     </div>
                 </div>

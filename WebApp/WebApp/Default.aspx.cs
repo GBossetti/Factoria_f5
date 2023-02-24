@@ -15,7 +15,8 @@ namespace WebApp
         protected void Page_Load(object sender, EventArgs e)
         {
             ImagenNegocio negocio = new ImagenNegocio();
-            listaImagen = negocio.listar();
+            listaImagen = negocio.listarImagen();
         }
+
     }
 }
