@@ -10,18 +10,21 @@ namespace WebApp
 {
     public partial class EliminarImg : System.Web.UI.Page
     {
+        public bool eliminado = false;
+
         protected void Page_Load(object sender, EventArgs e)
         {
         }
 
         protected void btnAceptar_Click(object sender, EventArgs e)
         {
+
             long id = long.Parse(Request.QueryString["Id"]);
 
             ImagenNegocio negocio = new ImagenNegocio();
             negocio.eliminarLogico(id);
 
-            Response.Redirect("Default.aspx");
+            eliminado = true;
         }
     }
 }

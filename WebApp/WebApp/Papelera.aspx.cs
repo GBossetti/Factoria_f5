@@ -11,6 +11,7 @@ namespace WebApp
 {
     public partial class Papelera : System.Web.UI.Page
     {
+        public bool papeleraVacia = false;
         long id;
         Imagen aux = new Imagen();
         ImagenNegocio negocioAux = new ImagenNegocio();
@@ -73,6 +74,13 @@ namespace WebApp
                 throw ex;
             }
 
+        }
+
+        protected void btnBorrar_Click(object sender, EventArgs e)
+        {
+            ImagenNegocio negocio = new ImagenNegocio();
+            negocio.eliminarFisico();
+            papeleraVacia = true;
         }
     }
 }
