@@ -19,8 +19,10 @@
         </div>
     </div>
     <div class="row">
-        <asp:Button ID="btnGuardar" Text="Guardar" runat="server" OnClick="btnGuardar_Click"/>
-        <a href="/">Cancelar</a>
+        <div class="col-md-6">
+            <asp:Button ID="btnGuardar" Text="Guardar" runat="server" OnClick="btnGuardar_Click"/>
+            <a href="/">Cancelar</a>
+        </div>
     </div>
 
 

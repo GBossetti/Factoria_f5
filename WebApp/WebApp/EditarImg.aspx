@@ -12,12 +12,14 @@
         </div>
     </div>
     <div class="col-md-4">
-        <asp:Image ID="imgImagen" runat="server" CssClass="img-fluid mb-3"/>
+        <asp:Image ID="imgImagen" runat="server" CssClass="img-fluid mb-3" AlternateText="Imagen inexistente"/>
     </div>
 
     <div class="row">
-        <asp:Button ID="btnGuardar" Text="Guardar" runat="server" OnClick="btnGuardar_Click" />
-        <a href="Default.aspx">Cancelar</a>
+        <div class="col-6">
+            <asp:Button ID="btnGuardar" Text="Guardar" runat="server" OnClick="btnGuardar_Click" />
+            <a href="Default.aspx">Cancelar</a>
+        </div>
     </div>
 
 
