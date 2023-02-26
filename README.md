@@ -1,5 +1,4 @@
-# Factoria_f5
-Prueba técnica. Aplicación web
+Aplicación web - Gestor de imágenes
 C# /.NET / ASP / SQLServer
 
 Para abrir la aplicación web se precisa que la misma sea ejecutada en un IDE que pueda compilar código C# y ejecutar la aplicación desde un servidor web de manera local. Se recomienda el Visual Studio, ya que este posee el contenedor web Inter Informations Service Express. Así mismo, se adjunta el script en SQL Server [BaseDeDatos.sql] para la creación de la BD y sus respectivos Procedimientos Almacenados. El mismo se encuentra dentro de la carpeta Script.
